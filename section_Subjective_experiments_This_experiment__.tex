@@ -22,10 +22,16 @@ for each mesh,
 \item \textbf{Compression}:  we used common lossy process of  compression algorithms to generate uniform geometric quantization.
 \end{itemize}
 \begin{itemize}
-\item  \textbf{Simplification}: We apply quadric based mesh decimation method \cite{Garland_1997} to generate the simplified models in this study.
+\item  \textbf{Simplification}: We applied quadric based mesh decimation method \cite{Garland_1997} to generate the simplified models in this study.
 \end{itemize}
 \begin{itemize}
-\item \textbf{Smoothing}:We consider Laplacien smoothing algorithm \cite{Steinbrecher_2008}.
+\item \textbf{Smoothing}:We considered Laplacien smoothing algorithm \cite{Steinbrecher_2008}.
 \end{itemize}
-
+for each texture,
+\begin{itemize}
+\item \textbf{JPEG}: A commonly used algorithm of lossy compression for 2D images was used to compress each texture.
+\end{itemize}
+\begin{itemize}
+\item \textbf{Sub-sampling}: We reduced the texture size by resampling through bilinear interpolation .
+\end{itemize}
 
