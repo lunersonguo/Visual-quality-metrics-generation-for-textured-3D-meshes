@@ -16,13 +16,16 @@ It is essential to choose appropriate distortions for our subjective study.  The
 \begin{itemize}
 \item For the experiment time, in each dataset, use limited number of distorted models to restrict the comparison time within an acceptable range by observers. 
 \end{itemize}
-For the criteria, we selected several commonly used geometric and textural distortions, and applied them to the 5 models in different strengths based our empirical decisions. We used following processing operations to generate all the distortions:\\
+For the criteria, we selected 5 commonly used geometric and textural distortions, solely applied each of them to each model in 4 different strengths based our empirical decisions, and generated 20 distorted models for one reference model(one mesh or texture is processed by one single strength of the algorithm). We used following processing operations to generate all the distortions:\\
 for each mesh,
 \begin{itemize}
 \item \textbf{Compression}:  we used common lossy process of  compression algorithms to generate uniform geometric quantization.
 \end{itemize}
 \begin{itemize}
-\item  \textbf{Simplification}: We simplified all the models by using quadric based mesh decimation method \cite{Garland_1997}.
+\item  \textbf{Simplification}: We apply quadric based mesh decimation method \cite{Garland_1997} to generate the simplified models in this study.
+\end{itemize}
+\begin{itemize}
+\item \textbf{Smoothing}:We consider Laplacien smoothing algorithm \cite{Steinbrecher_2008}.
 \end{itemize}
 
 
