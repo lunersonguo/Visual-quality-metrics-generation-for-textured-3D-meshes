@@ -4,3 +4,4 @@ section_Subjective_experiments_This_experiment__.tex
 figures/xpplantform3/xpplantform3.png
 figures/allmodels/allmodels.png
 figures/Step1/Step1.png
+figures/step2/step2.png
