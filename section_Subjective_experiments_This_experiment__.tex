@@ -76,5 +76,5 @@ The ranks contain potential information about visual sensitivity toward geometri
 
 Through observations among three types of distortions (smoothing, quantization and simplification), we found that the order of the distortions with the highest strengths from three types shows a regularity, which is that the model ranked with the worst visual quality always comes from either models processed by the strongest quantization method or those processed by the strongest simplification method, and the models with strongest smoothing distortions never appear in the end of ranks. For instance, among 20 distorted Hulk models, the distortion with the worst visual quality is the quantization with 7 bits, while the distortion of 4 iterations smoothing ranks 14.5.  Similar cases happen in other different models. This regularity implies some mechanisms of visual systems on sensing the variances of geometric surfaces, which means HVS is more sensitive to the variances from local areas (distortion caused by simplification or quantization) rather than to the global slight variances (distortion caused by smoothing). Meanwhile, previous study shows that HVS is highly adapted for extracting curvature as surface structural information.\\
 \begin{equation}
-A+B
+\delta_i= \sqrt{\frac{1}{K}\sum_{j=1}^K{((\hat{C_j}-C_j)-E(\hat{C_j}-C_j))^2}}
 \end{equation}
