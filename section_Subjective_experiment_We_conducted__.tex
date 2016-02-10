@@ -22,7 +22,7 @@ On the texture map:
 \end{itemize}
 The strength of these distortions have been adjusted manually in order to span the whole range of visual quality from imperceptible levels to high levels of impairment. For this task, a large set of distortions were generated and viewed by the authors and a subset of them that spanned the desired visual quality (i.e. “Excellent”, “Good”, “Fair” and “Poor”) were chosen to be included in the database. This perceptual adjustment of the distortion strength was also done for the LIVE Video Quality Database \cite{Seshadrinathan2010}. As stated by the authors, it allows to test the ability of objective metrics to predict visual quality consistently across varying content and distortion types. We thus generated 20 distorted models (5 distortion types $\times$ 4 strength) per reference object. \\
 To challenge the generalization ability of the objective metrics, we also included mixed distortions. For this task, we manually selected 36 distorted versions among the $12\times8=96$ possible combinations of the 12 geometry and 8 texture distortions detailed above. In practice we applied the 20 single-type distortions on the \textit{Hulk}, \textit{Sport Car}, \textit{squirrel} and \textit{Easter Island statue} model, and the mixed 36 mixed distortions on the \textit{Dwarf} model, resulting in a database of 116 models (+5 references), including the reference. Table \ref{tab-dis} details the distortion parameters while figure \ref{fig-dist} illustrate some visual examples.\\
-\begin{table}[htb]
+\begin{table}
 \tbl{\label{tab-dis} Details about the distortions applied on each reference model.}{
 
 \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | }
@@ -67,10 +67,10 @@ Once we have this preference matrix, we can infer a subjective quality score for
 %cf soumission le callet
 \subsubsection{Observer agreement}
 It is essential to analyze the agreements between the subjects before studying the results from the experiment. Since each observer outputs a global ranking of the stimuli, the best way to evaluate their agreement is to compute the Kendall's coefficient of concordance \textit{W} \cite{Kendall_1940} which assesses the agreement among raters. Table \ref{tab-W} details the results. \textit{W} ranges from 1, meaning complete agreement, to 0, meaning no agreement, while p-value associated with \textit{W} provides the likelihood of null hypothesis, which means no agreement between all the subjects. Table \ref{tab-W} shows that overall Kendall’s \textit{W} coefficients are least larger than XXXX, implying that for each reference, all the subjects are quite unanimous about sorting the visual qualities of the distorted models, and sufficiently small \textit{p-values} shows the high reliability of the \textit{W} coefficients.\\
-\begin{table}[htb]
+\begin{table}
 \tbl{\label{tab-W} Kendall’s \textit{W} between the subjective ranks for each reference model and each rendering condition.}{
 
-    \begin{tabular}{cccc}
+    \begin{tabular}{c c  c c}
         \textbf{Reference Model} & \textbf{Observers Number} & \textbf{Kendall's \textit{W}} & \textbf{p-value} \\ \hline
         squirrel & 11 & 0.7122 & $<0.0001$ \\ 
         Hulk & 13 & 0.727 & $<0.0001$ \\ 
