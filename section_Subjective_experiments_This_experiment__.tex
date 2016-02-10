@@ -1,62 +1,30 @@
-\section{Subjective experiments}
-This experiment aims at studying the visual annoyance impacts from mixed textural and geometric artifacts on textured 3D models. In detail, we ask all the participants firstly to observe a reference model briefly, and then, regarding to the reference, select out the more similar model in the following paired comparisons. The outputs of this experiment show the patterns on the HVS sensitivity towards different types of artifacts, and can be also used as an evaluation on the performance of existing metrics.
-\subsection{Experimental design}
-In the design of subjective quality evaluation experiment, we selected the protocol, known as paired comparison \cite{Lee_2011}, over rating methods which usually have problems with validity and reliability \cite{Govindarajulu_1992}. Opposite to the rating methods, for which the subjects usually require necessary trainings before the experiment, paired comparisons have the advantages of more simplicity and subject consistency \cite{Wills_2009}. \\
-In the study, each observer was firstly shown a rendered video clip containing illumination and a textured 3D mesh with constant speed rotation. After an observation within 15 seconds, a series of paired video clips having the same illumination and animating object, but with varying amount of (geometric and textural) distortions were displayed to the observer, and he/she was asked to select a more similar clip from left side video or right side one, regarding to the reference video (Figure 1 presents a screenshot of the experiment test). \\
-For the reference models, we chose five textured triangle meshes from different applied technological fields. The Hulk and the sport car are the artificial models from ShareGC.com, which is a social community of CG Artists, Animators and 3D Modelers displaying and sharing their work. The squirrel and the Easter Island statue, supported by Computer Graphics and Geometry Laboratory, are scanned real objects mapped with texture extracted from multiple photographs of physical statues. The Dwarf is also an artificial textured mesh created by. (Figure 2 shows all our models for the experiment)\\
-All the models were rendered in Autodesk 3DS Max 2015, commonly used as a professional  3D computer graphics program for making 3D animations, models, games and images. We used two sets of illumination and rendering settings to render the video clips.   Skylight illumination was firstly used to cast on all the models and their distorted ones since the surface properties are clearer under this illumination than under atypical ones such as a single point light source \cite{Fleming_2003}. Then, we utilized a spotlight illumination, set up by , on Dwarf models for validating the feasibility of our combined metrics under different illuminations.  Two low-speed rotating rates by pivoting the vertical axis were applied to the models under two different illuminations respectively, 0.628rad/s and 0.838rad/s, besides participants could optionally control the video play to observe models carefully. The sizes of rendered videos under two illuminations are 1280X1024 and 1920X1080(HDTV). All the experiments were conducted on a 15-inche MacBook Pro.\\
-\subsection{Stimuli creation and selection}
-It is essential to choose appropriate distortions for our subjective study.  The purpose of this experiment is to capture the human perceptibility toward complex textured artifacts. Thus, we applied several kinds of distortions on mesh and texture separately and then combinatorially mapped the textures (including original texture) to the corresponding meshes (including original mesh). Each distortion degree can be applied in varying amount, and we applied the distortion degrees by the following criteria: \\
-\begin{itemize}
-\item For each dataset, present diversified degrees of distortions in order to conclude significant remarks after the analysis of metrics performances. 
-\end{itemize}
-\begin{itemize}
-\item For each texture or mesh, find empirically increasing strength of distortions, which are clearly visible but not too strong, to avoid the biasing subjective results.
-\end{itemize}
-\begin{itemize}
-\item For the experiment time, in each dataset, use limited number of distorted models to restrict the comparison time within an acceptable range by observers. 
-\end{itemize}
-For the criteria, we selected 5 commonly used geometric and textural distortions, solely applied each of them to each model in 4 different strengths based on our empirical decisions, and generated 20 distorted models for one reference model, In details, the original mesh or texture was firstly duplicated 20 times, and then each copy was processed by one single strength of the algorithm. We used following processing operations to generate all the distorted models:\\
-for each mesh,
-\begin{itemize}
-\item \textbf{Compression}:  we used common lossy process of  compression algorithms to generate uniform geometric quantization.
-\end{itemize}
-\begin{itemize}
-\item  \textbf{Simplification}: We applied quadric based mesh decimation method \cite{Garland_1997} to generate the simplified models in this study.
-\end{itemize}
-\begin{itemize}
-\item \textbf{Smoothing}:We considered Laplacien smoothing algorithm \cite{Steinbrecher_2008}.
-\end{itemize}
-for each texture,
-\begin{itemize}
-\item \textbf{JPEG}: A commonly used algorithm of lossy compression for 2D images was used to compress each texture.
-\end{itemize}
-\begin{itemize}
-\item \textbf{Sub-sampling}: We reduced the texture size by resampling through bilinear interpolation .
-\end{itemize}
-\subsection{Participants and backstage procedure}
-We invited 85 participants to take part in the experiment, aging from 20 to 55 years, and they have normal or corrected vision. All the participants were the students and teaching staffs from the University of Lyon in France and University of Alberta in Canada, and 9 of them have the professional experience on image processing. On average, there are 12 minutes for each observer to finish the experiment for one reference model.  In general, it took longer time for observers to compare those models (squirrel and Easter Island statue) with almost monochrome texture than others.\\
-Since the task of each observer in paired comparisons is to provide a preference to one distorted model, which is closer to the reference, the number of comparisons (“rounds”) determines the reliability of subjective quality opinion. Ideally, when \textit{N} distortions are evaluated, the total number of rounds is $C^N_2$, which means to show all the possible combinations of two distorted models from \textit{N} distortions. However when \textit{N} is large (e.g., 20 in our study), the number of pairs become too many (e.g., 190 in our study) to be feasible \cite{Lee_2011}, which means each subject may spend much time on some redundant comparisons. For instance, two models with same distortion but different strengths, the one with lower distorting strength is statistically preferred than the other. Thus, the total comparisons of all the possible combinations are lack of efficiency, and the redundant comparisons may distract subjects from the valuable ones.\\
-In such cases, we used sorting method \cite{Farrell_2001} to reduce comparisons number and improve the efficiency. Detailedly, we firstly divided 20 distorted models into 5 groups by their distortion types (compression, simplification, smoothing, JPEG and Sub-sampling). In each group, we sorted the 4 distorted models by the increasing strengths of distortions (The distortion strengths are from 1 to 4, higher value means higher strength degree). According to the sorting method, the quality distances (differences) among groups are smaller than those inside each group, and thus we can conduct far fewer comparisons between models from two groups, and the quality estimation inside each group can be obtained based on the smaller distances determined by subjects. For instance, the model with distortion\textit{ smoothing 1} is preferred by the subject than the model with \textit{compression 2,} there will be no need to compare the distortions between \textit{smoothing 1} and \textit{compression 3} or \textit{compression 4,} since higher distortion strength of same type causes worse visual quality, hence the visual quality rank of these 4 distortions can be deduced and sorted as \textit{smoothing 1} > \textit{compression 2} > \textit{compression 3} > \textit{compression 4}. Figure 3, figure 4 and figure 5 show the detailed steps about the comparisons backstage procedure embedded with this sorting method. For the sake of convenience in statement, we use abbreviate letters with number, standing for different distortions with different strengths. \textit{Q} stands for quantization compression, \textit{J} for JPEG, \textit{L} for Laplacien smoothing, \textit{Si} for simplification and \textit{Su} for sub-sampling, and higher number means higher distortion strength.\\
-\subsection{Analysis}
-This experimental protocol significantly optimizes the comparisons for each observer, and thus improves the efficiency.  While the number of $C^N_2$ comparisons is 190, in our study each subject maximally does 44 comparisons to rank all the 20 models. In fact, throughout all the experiments, the average comparison number is 36.\\
-\subsubsection{User agreements}
-It is essential to analyze the agreements between all the subjects before we study the results from the experiment.  We utilized Kendall’s Coefficient concordance \textit{W} \cite{Kendall_1940} to assess the consistency of the ranks from the subjects.  \textit{W} ranges from 1, meaning complete agreement, to 0, meaning no agreement, while p-value associated with \textit{W} provides the likelihood of null hypothesis, which means no agreement between all the subjects. If p-value is less than a predetermined level of significance (usually determined as 0.001), we reject the null hypothesis. For each reference model, we computed the Kendall’s \textit{W} between the subjective ranks of 20 distorted models given by all the subjects (Table 1).\\
+\section{Subjective experiment}
+We conducted a large-scale subjective experiment to evaluate the visual impact of texture and geometry distortions on the appearance of textured 3D models. We chose a paired comparisons technique, where observers are shown two stimulus side by side and are asked to choose the one that is most similar to the reference (forced-choice methodology). This protocol was shown to be more accurate than others (e.g. single stimulus rating) due to the simplicity of the subjects’ task \cite{Mantiuk2012}. This section details the subjective study and its results.
 
-\begin{table} 
-    \begin{tabular}{ c c c c }
-        \textbf{Reference Model} & \textbf{Observers Number} & \textbf{Kendall's \textit{W}} & \textbf{p-value} \\ 
-        squirrel & 11 & 0.7122 & <0.0001 \\ 
-        Hulk & 13 & 0.727 & <0.0001 \\ 
-        Easter Island statue & 15 & 0.7574 & <0.0001 \\ 
-        Dwarf & 12 & 0.7724 & <0.0001 \\ 
-        Sport Car & 11 & 0.7581 & <0.0001 \\ 
-    \end{tabular} 
-    \caption{Kendall’s \textit{W} between the subjective ranks of 20 distorted models for each reference model} 
-\end{table}
-Table 1 shows the details that overall Kendall’s \textit{W} coefficients are least bigger than 0.71, implying that for each reference, all the subjects are quite unanimous about sorting the visual qualities of its 20 distorted models, and sufficiently small p-values shows the high reliability of the \textit{W} coefficients. These high consistencies of subjective opinions support us to continue exploiting all the results from the experiments.\\
-\subsubsection{Observations}
-The ranks contain potential information about visual sensitivity toward geometric and textural distortions, and we focused on the geometrics ones, aiming for proposing a geometric metric to measure textured models on their mesh parts.  For this purpose, for each reference model, we made statics on calculating the median rank for each of its distorted model from all the subjects. The median rank generally represents the overall ranking opinions (Table 2). \\
+\subsection{Stimuli Generation}
+We selected 5 textured triangle meshes created using different methodologies and targeting different application domains (see figure \ref{fig-ref}). The \textit{Hulk} and \textit{Sport Car} are artificial models created using a modeling software. They have been selected from a community model repository (ShareGC.com). They both have small numbers of polygons, structured texture content and smooth texture seams (i.e. vertices associated with multiple texture coordinate pairs). The \textit{squirrel} and the \textit{Easter Island statue} come from a reconstruction process using multiple photographs, they are courtesy of the EPFL Computer Graphics and Geometry Laboratory. Finally, the \textit{Dwarf} is a scanned model, courtesy of the Visual Computing Laboratory of ISTI-CNR, Pisa (http://vcg.isti.cnr.it). These three latter models, created respectively from reconstruction and scanning, exhibit noisier texture seams and content. The numbers of vertices from the five models goes from 6,000 to 250,000 and the texture size goes from $256\times256$ to $4096\times4096$. Note that the \textit{Hulk} and \textit{Sport Car} are associated to several texture images (resp. 2 and 15). To summarize, these objects span a wide variety of geometry and texture data.\\
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.7\linewidth]{allmodels}
+  \caption{\label{fig-ref} 5 Models used in the subjective study (from left to right: Dwarf, Easter Island statue, squirrel, Sport Car and Hulk)..}
+  \end{figure}
+These reference models have been corrupted by five types of distortions (three applied on the geometry and two applied on the texture), applied each with four different strengths:\\
+On the geometry:
+\begin{itemize}
+\item \textbf{Compression} - We consider uniform geometric quantization, the most common lossy process of compression algorithms.
+\item  \textbf{Simplification} - We consider the \textit{Quadric Error Metric} algorithm from \citet{GARLAND-1997}.
+\item \textbf{Smoothing}: We consider Laplacian smoothing \cite{Taubin:1995}.
+\end{itemize}
+On the texture map:
+\begin{itemize}
+\item \textbf{JPEG}: The most commonly used algorithm for the lossy compression for 2D images.
+\item \textbf{Sub-sampling}: We reduce the texture size by resampling through bilinear interpolation.
+\end{itemize}
+The strength of these distortions have been adjusted manually in order to span the whole range of visual quality from imperceptible levels to high levels of impairment. For this task, a large set of distortions were generated and viewed by the authors and a subset of them that spanned the desired visual quality (i.e. “Excellent”, “Good”, “Fair” and “Poor”) were chosen to be included in the database. This perceptual adjustment of the distortion strength was also done for the LIVE Video Quality Database \cite{Seshadrinathan2010}. As stated by the authors, it allows to test the ability of objective metrics to predict visual quality consistently across varying content and distortion types. We thus generated 20 distorted models (5 distortion types $\times$ 4 strength) per reference object. \\
+To challenge the generalization ability of the objective metrics, we also included mixed distortions. For this task, we manually selected 36 distorted versions among the $12\times8=96$ possible combinations of the 12 geometry and 8 texture distortions detailed above. In practice we applied the 20 single-type distortions on the \textit{Hulk}, \textit{Sport Car}, \textit{squirrel} and \textit{Easter Island statue} model, and the mixed 36 mixed distortions on the \textit{Dwarf} model, resulting in a database of 116 models (+5 references), including the reference. Table \ref{tab-dis} details the distortion parameters while figure \ref{fig-dist} illustrate some visual examples.\\
+\begin{table}[htb]
+\tbl{\label{tab-dis} Details about the distortions applied on each reference model.}{
+
 \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | }
 \hline
 	 & Squirral &  & Hulk &  & Easter Island statue &  & Dwarf &  & Sport Car &  \\ \hline
@@ -73,21 +41,49 @@ The ranks contain potential information about visual sensitivity toward geometri
 	Quantization & 8 bits & 8 & 8 bits & 10 & 8 bits & 11 & 9 bits & 8 & 8 bits & 15 \\ \hline
 	Quantization & 9 bits & 4 & 9 bits & 4.5 & 9 bits & 7 & 10 bits & 5 & 9 bits & 9 \\ \hline
 	Quantization & 10 bits & 1 & 10 bits & 2 & 10 bits & 5 & 11 bits & 3 & 10 bits & 5 \\ \hline
-\end{tabular}
+\end{tabular}}
 
-Through observations among three types of distortions (smoothing, quantization and simplification), we found that the order of the distortions with the highest strengths from three types shows a regularity, which is that the model ranked with the worst visual quality always comes from either models processed by the strongest quantization method or those processed by the strongest simplification method, and the models with strongest smoothing distortions never appear in the end of ranks. For instance, among 20 distorted Hulk models, the distortion with the worst visual quality is the quantization with 7 bits, while the distortion of 4 iterations smoothing ranks 14.5.  Similar cases happen in other different models. This regularity implies some mechanisms of visual systems on sensing the variances of geometric surfaces, which means HVS is more sensitive to the variances from local areas (distortion caused by simplification or quantization) rather than to the global slight variances (distortion caused by smoothing). Meanwhile, previous study \cite{Guo_2015} shows that HVS is highly adapted for extracting curvature as surface structural information.\\
-Based on the observations and previous studies \cite{Lavou__2011} \cite{Guo_2015}, we propose a novel local distortion measurement by computing the amount of variances of curvature in local neighborhoods between two meshes (distorted mesh $M_d$ and reference mesh $M_r$).  In details, at first we use fast matching method to establish a correspondence between $M_d$ and $M_r$, obtaining all the mean curvatures ${C_i}$ from $M_d$ and their corresponding mean curvature ${\hat{Ci}}$ on the surface $M_r$. For each vertex ${v}$ from $M_d$, we compute the local distortion $\delta_v$ in a small surface region $h$, in which $K$ vertices and points are enclosed on each mesh,  as follows:
-\begin{equation}
-\delta_v= \sqrt{\frac{1}{K}\sum_{j=1}^K{((\hat{C_j}-C_j)-E(\hat{C_j}-C_j))^2}}
-\end{equation}
-$E(\hat{C_j}-C_j)$ is the average value of mean curvature differences in the region $h$.\\
-Refer to the work in \cite{Lavou__2011}, for each vertex we also measured the differences in different scales($h_i$) to capture the perceptually meaningful scales, and improve the efficiency and robustness of the metric. We took three scales $h_i\in\{2\epsilon, 3\epsilon, 4\epsilon\}$, where $\epsilon = 0.5\%$ of the max length of the bounding box of the model.Then Multi-scale local distortion measure $\delta_M(v)$ was computed as:
-\begin{equation}
-\delta_M(v) =  \frac{\sum_{i=1}^n{\delta}_v^{h_i}}{n}
-\end{equation}
-where $n$ is the number of scales (3 in our study). Finally, Minkowski pooling method was used to pool all the local distortion measures into one global score $G\Delta$:
-\begin{equation}
-G\Delta =(\frac{\sum_{i=1}^N{\delta_M(v)^p}}{N})^\frac{1}{p}
-\end{equation}
-where $N$ is the total  vertices number on $M_d$, typical $p$ values are from 2 to 4, and via our trails and comparisons, we determined to use 2(Root Mean Square).\\
-Since this metric measures the amount of mean curvature variances over small regions between two meshes. It concentrates more on the variances of local roughness, and less on the global slight variation, and hence partially approximates HVS sensitivity toward geometric distortions. The performances of this new metric and other current visual quality ones are evaluated in the next section.  
+   \label{tab-dist}
+\end{table}
+
+\subsection{Rendering parameters}
+\noindent\textbf{User interaction}:
+In existing subjective studies involving 3D content, different ways have been used to display the 3D models to the observers, from the most simple (as static images, as in \cite{Watson2001}) to the most complex (by allowing free rotation, zoom and translation, as in \cite{Corsini2007}). While it is important for the observer to have access to different viewpoints of the 3D object, the problem of allowing free interaction is the cognitive overload which may alter the results. A good compromise is to use animations, as in \cite{Pan2005}. For each object of our database, we generate a low-speed rotation animation around the vertical axis (0.628rad/s).\\
+\noindent\textbf{Lighting and shading}:
+As noticed by \citet{Rogowitz2001} the position and type of light sources have a strong influence on the perception of the artefacts. A lighting from the front tends to mask them, hence we chose an indirect illumination. \citet{Sun1998} showed that people tend to assume light is above and slightly to the left of the object when they interpret a shaded picture as a 3D scene. Their observations have been confirmed by \citet{O'Shea2008} who demonstrated that the viewer’s perception of a 3D shape is more accurate when the angle between the light direction and viewing direction is 20-30 deg above the viewpoint and to the left of 12 deg from vertical. We follow this lighting condition by puting a spot light at this position. For the material, we kept the original parameters from the source reference objects, which are mainly diffuse. The video size is 1920X1080 and the duration is 10 seconds.\\
+In order to study the influence of shading on the results, we also re-generated the same set of videos by keeping only the reflectance (i.e. without shading). Examples are shown in figure \ref{fig-render}. We thus obtain 10 video sets to rate (5 models $\times$ 2 rendering settings), for a total of 232 videos.  
+\subsection{Experimental procedure}
+As stated above, we opted for a paired comparison methodology since it demonstrated to be more reliable than rating methods \cite{Mantiuk2012}. The participants are shown two videos of distorted models at a time, side by side, and are asked to choose one that is most similar to the reference. The observer can replay the video as much as he wants. For sake of readability, the reference video is not displayed on the same screen but is presented just before the beginning of the comparisons, and can then be viewed at any time on a pop-up window by click on a button. The interface was developed in JavaScript and is illustrated in figure \fig{fig-inter}.\\
+The main issue with the paired comparison protocol is the large number of possible comparisons: $\binom{2}{20}$=190 per model for the single distortion setting, and $\binom{2}{36}$ = 630 for the mixed distortion one. It is therefore unrealistic to ask a participant to perform a complete test even on a single model. Fortunately, this high number of trials per model can be reduced by using sorting algorithms as recommended in \cite{Silverstein2001,Mantiuk2012}. The idea is to embed a sorting algorithm into the experiment platform; this algorithm then decide in an on-line fashion which pairs of videos to compare based on the previous comparisons.\\
+We introduced a simple yet efficient sorting algorithm for the single-distortion setting. The idea is obtain a global ranking of the 20 stimuli by interleaving progressively them, one distortion type at a time (i.e. compression, simplification, smoothing, JPEG and Sub-sampling). For a given distortion $D$, we assume the distortion strength goes from $D_1$ (weak) to $D_4$ (strong). The assumption behind our algorithm is that for a given distortion $D$, the quality of $D_i$ is always better than $D_j$ for $j>i$ (noted as $D_i>D_j, \forall j>i$). Figures \ref{fig-sort} illustrates the process. Two distortions types $Q$ and $J$ are randomly chosen (e.g. compression and JPEG), $Q_1$ and $J_1$ are then compared. The index of the selected video ($J_1$) is pushed into a list (\textit{List 1}). In the next trial, the \textit{unselected} model from previous round ($Q_1$) and a distorted model with a \textit{deceased} level from the other type ($J_2$) are shuffled and displayed to the user. This process continues until all 8 models are sorted from best to weakest quality. This sorting process is repeated with two other distortions types (smoothing and simplification in the example) to form a second list (\textit{List 2}) which is then interleaved with the remaining distortion type (sub-sampling) and then with \textit{List 1} to obtain the final ranking of the 20 distortions. In our study, the average comparison number was 36 (instead of 190 for the full design).\\
+For the mixed-distortion setting, the hypothesis $D_i>D_j, \forall j>i$ do not hold anymore. Hence, we implemented a more classical self-balancing binary tree, as in \cite{Mantiuk2012}. The average number of comparison for sorting the 36 distorted models was 140 (instead of 630). 
+\subsection{Participants}
+A total of XXX subjects took part to the experiment, aged between 20 and 55, all with normal or corrected to normal vision. They were students and staffs from the University of Lyon in France and the University of Alberta in Canada. On average, it took 12 minutes for one observer to finish the experiment for one model in the single-distortion setting and XXX minutes in the mixed distortion one. XX subject rated 1 model, YYY rated 2 models and ZZZ subects rated 3 models. None of these repetitions took place on the same day in order to prevent any learning effect. We obtained between 10 and 15 observers The experiments were all conducted on the same 15-inchs MacBook Pro screen, in a dark room. In total, each of the 10 video sets (5 models $\times$ 2 rendering settings) was judged between 10 and 15 observers (see table \ref{tab-W}).\\
+\subsection{Computing scores}
+For each video set and each subject, we obtain a global ranking of the $n$ distorted models. From this ranking, it is easy to retrieve the full preference matrix ($n\times n$), by applying the transitive relation: if object A is better than object B and B is better than C, then we can deduce that A is better than C. These per-subject preference matrices can then be summed into a single one (per video set). In this matrix $P$, each element $P_{i,j}$ represents the number of times the stimulus $i$ was judged to have higher quality than stimulus $j$.\\
+Once we have this preference matrix, we can infer a subjective quality score for each distorted object. For this purpose, we adopt Thurstone’s Law of Comparative Judgments, Case V \cite{Thurstone1927}. This model assumes that the observers' choices can be thought of as sampled from a normal distribution of underlying quality score for each object. 
+
+\subsection{Analysis and discussion}
+%cf soumission le callet
+\subsubsection{Observer agreement}
+It is essential to analyze the agreements between the subjects before studying the results from the experiment. Since each observer outputs a global ranking of the stimuli, the best way to evaluate their agreement is to compute the Kendall's coefficient of concordance \textit{W} \cite{Kendall_1940} which assesses the agreement among raters. Table \ref{tab-W} details the results. \textit{W} ranges from 1, meaning complete agreement, to 0, meaning no agreement, while p-value associated with \textit{W} provides the likelihood of null hypothesis, which means no agreement between all the subjects. Table \ref{tab-W} shows that overall Kendall’s \textit{W} coefficients are least larger than XXXX, implying that for each reference, all the subjects are quite unanimous about sorting the visual qualities of the distorted models, and sufficiently small \textit{p-values} shows the high reliability of the \textit{W} coefficients.\\
+\begin{table}[htb]
+\tbl{\label{tab-W} Kendall’s \textit{W} between the subjective ranks for each reference model and each rendering condition.}{
+
+    \begin{tabular}{cccc}
+        \textbf{Reference Model} & \textbf{Observers Number} & \textbf{Kendall's \textit{W}} & \textbf{p-value} \\ \hline
+        squirrel & 11 & 0.7122 & $<0.0001$ \\ 
+        Hulk & 13 & 0.727 & $<0.0001$ \\ 
+        Easter Island statue & 15 & 0.7574 & $<0.0001$ \\ 
+        Dwarf & 12 & 0.7724 & $<0.0001$ \\ 
+        Sport Car & 11 & 0.7581 & $<0.0001$ \\ \hline
+    \end{tabular} }
+		
+   \label{tab-W}
+\end{table}
+
+
+\subsubsection{Effect of the rendering}
+
+
+\subsubsection{Observations}
