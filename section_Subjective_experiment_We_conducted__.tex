@@ -68,7 +68,7 @@ Once we have this preference matrix, we can infer a subjective quality score for
 \subsubsection{Observer agreement}
 It is essential to analyze the agreements between the subjects before studying the results from the experiment. Since each observer outputs a global ranking of the stimuli, the best way to evaluate their agreement is to compute the Kendall's coefficient of concordance \textit{W} \cite{Kendall_1940} which assesses the agreement among raters. Table \ref{tab-W} details the results. \textit{W} ranges from 1, meaning complete agreement, to 0, meaning no agreement, while p-value associated with \textit{W} provides the likelihood of null hypothesis, which means no agreement between all the subjects. Table \ref{tab-W} shows that overall Kendall’s \textit{W} coefficients are least larger than XXXX, implying that for each reference, all the subjects are quite unanimous about sorting the visual qualities of the distorted models, and sufficiently small \textit{p-values} shows the high reliability of the \textit{W} coefficients.\\
 \begin{table}
-\tbl{\label{tab-W} Kendall’s \textit{W} between the subjective ranks for each reference model and each rendering condition.}{
+%\tbl{\label{tab-W} Kendall’s \textit{W} between the subjective ranks for each reference model and each rendering condition.}{
 
     \begin{tabular}{c c  c c}
         \textbf{Reference Model} & \textbf{Observers Number} & \textbf{Kendall's \textit{W}} & \textbf{p-value} \\ \hline
@@ -77,7 +77,7 @@ It is essential to analyze the agreements between the subjects before studying t
         Easter Island statue & 15 & 0.7574 & $<0.0001$ \\ 
         Dwarf & 12 & 0.7724 & $<0.0001$ \\ 
         Sport Car & 11 & 0.7581 & $<0.0001$ \\ \hline
-    \end{tabular} }
+    \end{tabular}% }
 		
    \label{tab-W}
 \end{table}
