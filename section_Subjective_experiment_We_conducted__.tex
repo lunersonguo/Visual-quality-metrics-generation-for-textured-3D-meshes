@@ -3,7 +3,7 @@ We conducted a large-scale subjective experiment to evaluate the visual impact o
 
 \subsection{Stimuli Generation}
 We selected 5 textured triangle meshes created using different methodologies and targeting different application domains (see figure \ref{fig-ref}). The \textit{Hulk} and \textit{Sport Car} are artificial models created using a modeling software. They have been selected from a community model repository (ShareGC.com). They both have small numbers of polygons, structured texture content and smooth texture seams (i.e. vertices associated with multiple texture coordinate pairs). The \textit{squirrel} and the \textit{Easter Island statue} come from a reconstruction process using multiple photographs, they are courtesy of the EPFL Computer Graphics and Geometry Laboratory. Finally, the \textit{Dwarf} is a scanned model, courtesy of the Visual Computing Laboratory of ISTI-CNR, Pisa (http://vcg.isti.cnr.it). These three latter models, created respectively from reconstruction and scanning, exhibit noisier texture seams and content. Note that the \textit{Hulk} and \textit{Sport Car} are associated to several texture images (resp. 2 and 15). The numbers of vertices from the five models goes from 6,000 to 250,000 and the texture size goes from $256\times256$ (when several texture maps are used) to $4096\times4096$.  To summarize, these objects span a wide variety of geometry and texture data.\\
-\begin{figure}[htb]
+\begin{figure}
   \centering
   \includegraphics[width=.7\linewidth]{allmodels.png}
   \caption{\label{fig-ref} 5 Models used in the subjective study (from left to right: Dwarf, Easter Island statue, squirrel, Sport Car and Hulk)..}
@@ -23,7 +23,7 @@ On the texture map:
 The strength of these distortions have been adjusted manually in order to span the whole range of visual quality from imperceptible levels to high levels of impairment. For this task, a large set of distortions were generated and viewed by the authors and a subset of them that spanned the desired visual quality (i.e. “Excellent”, “Good”, “Fair” and “Poor”) were chosen to be included in the database. This perceptual adjustment of the distortion strength was also done for the LIVE Video Quality Database \cite{Seshadrinathan2010}. As stated by the authors, it allows to test the ability of objective metrics to predict visual quality consistently across varying content and distortion types. We thus generated 20 distorted models (5 distortion types $\times$ 4 strength) per reference object. \\
 To challenge the generalization ability of the objective metrics, we also included mixed distortions. For this task, we manually selected 36 distorted versions among the $12\times8=96$ possible combinations of the 12 geometry and 8 texture distortions detailed above. In practice we applied the 20 single-type distortions on the \textit{Hulk}, \textit{Sport Car}, \textit{squirrel} and \textit{Easter Island statue} model, and the mixed 36 mixed distortions on the \textit{Dwarf} model, resulting in a database of 116 models (+5 references), including the reference. Table \ref{tab-dis} details the distortion parameters while figure \ref{fig-dist} illustrate some visual examples.\\
 \begin{table}
-\tbl{\label{tab-dis} Details about the distortions applied on each reference model.}{
+%\tbl{\label{tab-dis} Details about the distortions applied on each reference model.}{
 
 \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | }
 \hline
@@ -41,7 +41,7 @@ To challenge the generalization ability of the objective metrics, we also includ
 	Quantization & 8 bits & 8 & 8 bits & 10 & 8 bits & 11 & 9 bits & 8 & 8 bits & 15 \\ \hline
 	Quantization & 9 bits & 4 & 9 bits & 4.5 & 9 bits & 7 & 10 bits & 5 & 9 bits & 9 \\ \hline
 	Quantization & 10 bits & 1 & 10 bits & 2 & 10 bits & 5 & 11 bits & 3 & 10 bits & 5 \\ \hline
-\end{tabular}}
+\end{tabular}%}
 
    \label{tab-dist}
 \end{table}
