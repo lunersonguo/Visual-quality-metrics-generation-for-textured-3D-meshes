@@ -6,4 +6,3 @@ figures/allmodels/allmodels.png
 figures/Step1/Step1.png
 figures/step2/step2.png
 figures/step3/step3.png
-section_Toward_an_optimal_metric__.tex
