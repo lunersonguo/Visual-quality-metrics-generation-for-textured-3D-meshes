@@ -7,3 +7,4 @@ figures/Step1/Step1.png
 figures/step2/step2.png
 figures/step3/step3.png
 figures/StatisticsNewrenderign/StatisticsNewrenderign.png
+figures/StatisticsOldrenderign/StatisticsOldrenderign.png
