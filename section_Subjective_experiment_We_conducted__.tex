@@ -26,29 +26,29 @@ To challenge the generalization ability of the objective metrics, we also includ
 \centering
 \caption{All the distortions applied on our models for the study}
 \label{my-label}
-\begin{tabular}{llllll}
-Distortion type & Method\&ref            & Squirral       & Hulk         & Easter Island statue & Sport Car      \\
+\begin{tabular}{lllllll}
+ID& Distortion type & Method\&ref            & Squirral       & Hulk         & Easter Island statue & Sport Car      \\
                 &                        & Settings       & Settings     & Settings             & Settings       \\
-Smoothing       & Taubin              & 1 iteration    & 1 iteration  & 10 iterations        & 1 iteration    \\
-Smoothing       & Taubin              & 3 iterations   & 2 iterations & 20 iterations        & 3 iterations   \\
-Smoothing       & Taubin              & 5 iterations   & 3 iterations & 30 iterations        & 5 iterations   \\
-Smoothing       & Taubin              & 7 iterations   & 4 iterations & 50 iterations        & 7 iterations   \\
-Simplification  & Garland\&Eckbert \cite{Garland_1997}       & 87.5\% removed & 70\% removed & 95\% removed         & 87.5\% removed \\
-Simplification  & Garland\&Eckbert \cite{Garland_1997}       & 75\% removed   & 50\% removed & 87.5\% removed       & 75\% removed   \\
-Simplification  & Garland\&Eckbert \cite{Garland_1997}        & 70\% removed   & 40\% removed & 70\% removed         & 60\% removed   \\
-Simplification  & Garland\&Eckbert \cite{Garland_1997}       & 50\% removed   & 30\% removed & 50\% removed         & 50\% removed   \\
-Quantization    & Uniform                & 7 bits         & 7 bits       & 7 bits               & 7 bits         \\
-Quantization    & Uniform                & 8 bits         & 8 bits       & 8 bits               & 8 bits         \\
-Quantization    & Uniform                & 9 bits         & 9 bits       & 9 bits               & 9 bits         \\
-Quantization    & Uniform                & 10 bits        & 10 bits      & 10 bits              & 10 bits        \\
-JPEG            & DCT                    & 6\% quality    & 8\% quality  & 8\% quality          & 1\% quality    \\
-JPEG            & DCT                    & 10\% quality   & 10\% quality & 12\% quality         & 3\% quality    \\
-JPEG            & DCT                    & 14\% quality   & 14\% quality & 16\% quality         & 5\% quality    \\
-JPEG            & DCT                    & 18\% quality   & 18\% quality & 80\% quality         & 10\% quality   \\
-Sub-sampling    & bilinear interpolation & 10\% sampled   & 10\% sampled & 5\% sampled          & 5\% sampled    \\
-Sub-sampling    & bilinear interpolation & 20\% sampled   & 20\% sampled & 10\% sampled         & 10\% sampled   \\
-Sub-sampling    & bilinear interpolation & 30\% sampled   & 30\% sampled & 20\% sampled         & 20\% sampled   \\
-Sub-sampling    & bilinear interpolation & 40\% sampled   & 40\% sampled & 25\% sampled         & 50\% sampled  
+L1 & Smoothing       & Taubin              & 1 iteration    & 1 iteration  & 10 iterations        & 1 iteration    \\
+L2 & Smoothing       & Taubin              & 3 iterations   & 2 iterations & 20 iterations        & 3 iterations   \\
+L3 & Smoothing       & Taubin              & 5 iterations   & 3 iterations & 30 iterations        & 5 iterations   \\
+L4 & Smoothing       & Taubin              & 7 iterations   & 4 iterations & 50 iterations        & 7 iterations   \\
+Si4 & Simplification  & Garland\&Eckbert \cite{Garland_1997}       & 87.5\% removed & 70\% removed & 95\% removed         & 87.5\% removed \\
+Si3 & Simplification  & Garland\&Eckbert \cite{Garland_1997}       & 75\% removed   & 50\% removed & 87.5\% removed       & 75\% removed   \\
+Si2 & Simplification  & Garland\&Eckbert \cite{Garland_1997}        & 70\% removed   & 40\% removed & 70\% removed         & 60\% removed   \\
+Si1 & Simplification  & Garland\&Eckbert \cite{Garland_1997}       & 50\% removed   & 30\% removed & 50\% removed         & 50\% removed   \\
+Q1 & Quantization    & Uniform                & 7 bits         & 7 bits       & 7 bits               & 7 bits         \\
+Q2 & Quantization    & Uniform                & 8 bits         & 8 bits       & 8 bits               & 8 bits         \\
+Q3 & Quantization    & Uniform                & 9 bits         & 9 bits       & 9 bits               & 9 bits         \\
+Q4 & Quantization    & Uniform                & 10 bits        & 10 bits      & 10 bits              & 10 bits        \\
+J4 & JPEG            & DCT                    & 6\% quality    & 8\% quality  & 8\% quality          & 1\% quality    \\
+J3 & JPEG            & DCT                    & 10\% quality   & 10\% quality & 12\% quality         & 3\% quality    \\
+J2 & JPEG            & DCT                    & 14\% quality   & 14\% quality & 16\% quality         & 5\% quality    \\
+J1 & JPEG            & DCT                    & 18\% quality   & 18\% quality & 80\% quality         & 10\% quality   \\
+Su4 & Sub-sampling    & bilinear interpolation & 10\% sampled   & 10\% sampled & 5\% sampled          & 5\% sampled    \\
+Su3 & Sub-sampling    & bilinear interpolation & 20\% sampled   & 20\% sampled & 10\% sampled         & 10\% sampled   \\
+Su2 & Sub-sampling    & bilinear interpolation & 30\% sampled   & 30\% sampled & 20\% sampled         & 20\% sampled   \\
+Su1 & Sub-sampling    & bilinear interpolation & 40\% sampled   & 40\% sampled & 25\% sampled         & 50\% sampled  
 \end{tabular}
 \lable{tab-dis}
 \end{table}
