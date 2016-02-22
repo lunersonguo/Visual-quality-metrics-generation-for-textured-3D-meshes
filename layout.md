@@ -6,4 +6,3 @@ figures/allmodels1/allmodels1.png
 figures/Step1/Step1.png
 figures/step2/step2.png
 figures/step3/step3.png
-figures/StatisticsOldrenderign/StatisticsOldrenderign.png
