@@ -7,7 +7,7 @@ Based on the observations and previous studies, we propose a novel local distort
 \end{equation}
   
  $E(\hat{C_j}-C_j)$ is the mean value of curvatures differences in the region $h$.
-Refer to the work in \cite{Lavou__2011}, for each vertex we also measured the differences in different scales($h_i$) to capture the perceptually meaningful scales, and improve the efficiency and robustness of the metric. We took three scales $h_i\in\{2\epsilon, 3\epsilon, 4\epsilon\}$, where $\epsilon = 0.5\%$ of the max length of the bounding box of the model.  Then Multi-scale local distortion measure $\delta_M(v)$ was computed as:
+Refer to the work in \cite{Lavou__2011}, for each vertex we also measured the differences in different scales($h_i$) to capture the perceptually meaningful scales, and improve the efficiency and robustness of the metric. We took three scales $h_i\in\{2\epsilon, 3\epsilon, 4\epsilon\}$, where $\epsilon = 0.25\%$ of the max length of the bounding box of the model.  Then Multi-scale local distortion measure $\delta_M(v)$ was computed as:
 \begin{equation}
  \delta_M(v) =  \frac{\sum_{i=1}^n{\delta}_v^{h_i}}{n}
  \end{equation}
