@@ -7,5 +7,5 @@ figures/Step1/Step1.png
 figures/step2/step2.png
 figures/step3/step3.png
 figures/StatisticsNewrenderign1/StatisticsNewrenderign1.png
-section_Toward_an_optimal_metric__.tex
 figures/StatisticsOldrenderign1/StatisticsOldrenderign1.png
+section_Toward_an_optimal_metric__.tex
