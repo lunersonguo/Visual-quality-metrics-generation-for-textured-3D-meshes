@@ -8,3 +8,4 @@ figures/step2/step2.png
 figures/step3/step3.png
 figures/StatisticsNewrenderign1/StatisticsNewrenderign1.png
 figures/StatisticsOldrenderign1/StatisticsOldrenderign1.png
+section_4_Toward_an_optimal__.tex
