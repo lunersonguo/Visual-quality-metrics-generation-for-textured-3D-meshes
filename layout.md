@@ -1,4 +1,3 @@
-figures/allmodels2/allmodels2.png
 Introduction.tex
 section_Related_work_Our_goal__.tex
 section_Subjective_experiment_We_conducted__.tex
