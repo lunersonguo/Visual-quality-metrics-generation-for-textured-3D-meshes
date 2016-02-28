@@ -43,3 +43,18 @@ where $\alpha$ is a weight for combining two measures. Then we utilized machine 
 \subsubsection{Evaluations of the combinations}
 As we presented before, we used a cross-validation like protocol to optimize the combinations of geometric and textural measurements: $CM_1$(the optimal combination of MSDM2 and MS-SSIM) and $CM_2$(the optimal combination of SDCD and MS-SSIM). To evaluate the optimal combinations, we also introduced FQM and some well-known Video Quality Measurements: VQM, VQM-PSNR and VQM-MSSSIM, the last two of which are embedded with image quality metrics, for the comparison. Since previously FQM was not subjected to perceptual validations by any subjective experiment, in our study we used our protocol to determine the optimal weight for $Q_G$ and $Q_T$. Then, we computed the Spearman rank and Pearson correlations between the measured values and ground truths, and also calculated RMS values of residuals. All results are shown in the Table 5 below.\\
 
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{lllllllllllll}
+           & Squirrel &      &      & Hulk  &       &      & Easter Head &      &      & Sport Car &      &      \\
+           & rp       & rs   & RMSE & rp    & rs    & RMSE & rp          & rs   & RMSE & rp        & rs   & RMSE \\
+VQM        & 12.0     & 9.5  &      & 18.26 & 35.52 &      & 26.5        & 30.0 &      & 62.2      & 67.2 &      \\
+VQM-PSNR   & 21.7     & 26.0 &      & 33.09 & 35.82 &      & 21.2        & 26.3 &      & 67.0      & 70.0 &      \\
+VQM-MSSSIM & 24.5     & 38.9 &      & 16.80 & 41.31 &      & 25.3        & 42.1 &      & 66.8      & 72.3 &      \\
+FQM        & 51.2     & 68.9 &      & 28.61 & 43.79 &      & 25.3        & 21.5 &      & 68.2      & 45.0 &      \\
+CM1        & 82.0     & 81.7 &      & 69.22 & 87.66 &      & 43.4        & 47.7 &      & 65.6      & 53.8 &      \\
+CM2        & 78.1     & 71.3 &      & 63.59 & 81.49 &      & 58.0        & 67.7 &      & 64.1      & 49.6 &     
+\end{tabular}
+\end{table}
