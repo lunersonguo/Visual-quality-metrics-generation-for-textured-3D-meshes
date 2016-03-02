@@ -53,6 +53,52 @@ To challenge the generalization ability of the objective metrics, we also includ
 \lable{tab-dis}
 \end{table}
 
+\begin{table}[]
+\centering
+\caption{All the mixed distortions applied on the Dwarf model}
+\label{my-label}
+\begin{tabular}{lllllll}
+\textbf{ID}  & \textbf{}    & \textbf{Textural Distortion} & \textbf{}    & \textbf{}      & \textbf{Geometric Distortion} &                \\
+             &              & Method\&ref                  & Settings     &                & Method\&ref                   & Settings       \\
+\textit{D11} & JPEG         & DCT                          & 6\% quality  & Smoothing      & Taubin                        & 25  iterations \\
+\textit{D12} & JPEG         & DCT                          & 6\% quality  & Smoothing      & Taubin                        & 50 iterations  \\
+\textit{D13} & JPEG         & DCT                          & 6\% quality  & Quantization   & Uniform                       & 8 bits         \\
+\textit{D14} & JPEG         & DCT                          & 6\% quality  & Quantization   & Uniform                       & 10 bits        \\
+\textit{D15} & JPEG         & DCT                          & 6\% quality  & Simplification & Garland\&Eckbert              & 92\% removed   \\
+\textit{D16} & JPEG         & DCT                          & 6\% quality  & Simplification & Garland\&Eckbert              & 87\% removed   \\
+\textit{D21} & JPEG         & DCT                          & 8\% quality  & Smoothing      & Taubin                        & 25  iterations \\
+\textit{D22} & JPEG         & DCT                          & 8\% quality  & Smoothing      & Taubin                        & 50 iterations  \\
+\textit{D23} & JPEG         & DCT                          & 8\% quality  & Quantization   & Uniform                       & 8 bits         \\
+\textit{D24} & JPEG         & DCT                          & 8\% quality  & Quantization   & Uniform                       & 10 bits        \\
+\textit{D25} & JPEG         & DCT                          & 8\% quality  & Simplification & Garland\&Eckbert              & 92\% removed   \\
+\textit{D26} & JPEG         & DCT                          & 8\% quality  & Simplification & Garland\&Eckbert              & 87\% removed   \\
+\textit{D31} & JPEG         & DCT                          & 10\% quality & Smoothing      & Taubin                        & 25  iterations \\
+\textit{D32} & JPEG         & DCT                          & 10\% quality & Smoothing      & Taubin                        & 50 iterations  \\
+\textit{D33} & JPEG         & DCT                          & 10\% quality & Quantization   & Uniform                       & 8 bits         \\
+\textit{D34} & JPEG         & DCT                          & 10\% quality & Quantization   & Uniform                       & 10 bits        \\
+\textit{D35} & JPEG         & DCT                          & 10\% quality & Simplification & Garland\&Eckbert              & 92\% removed   \\
+\textit{D36} & JPEG         & DCT                          & 10\% quality & Simplification & Garland\&Eckbert              & 87\% removed   \\
+\textit{D41} & Sub-sampling & bilinear interpolation       & 3\% sampled  & Smoothing      & Taubin                        & 25  iterations \\
+\textit{D42} & Sub-sampling & bilinear interpolation       & 3\% sampled  & Smoothing      & Taubin                        & 50 iterations  \\
+\textit{D43} & Sub-sampling & bilinear interpolation       & 3\% sampled  & Quantization   & Uniform                       & 8 bits         \\
+\textit{D44} & Sub-sampling & bilinear interpolation       & 3\% sampled  & Quantization   & Uniform                       & 10 bits        \\
+\textit{D45} & Sub-sampling & bilinear interpolation       & 3\% sampled  & Simplification & Garland\&Eckbert              & 92\% removed   \\
+\textit{D46} & Sub-sampling & bilinear interpolation       & 3\% sampled  & Simplification & Garland\&Eckbert              & 87\% removed   \\
+\textit{D51} & Sub-sampling & bilinear interpolation       & 5\% sampled  & Smoothing      & Taubin                        & 25  iterations \\
+\textit{D52} & Sub-sampling & bilinear interpolation       & 5\% sampled  & Smoothing      & Taubin                        & 50 iterations  \\
+\textit{D53} & Sub-sampling & bilinear interpolation       & 5\% sampled  & Quantization   & Uniform                       & 8 bits         \\
+\textit{D54} & Sub-sampling & bilinear interpolation       & 5\% sampled  & Quantization   & Uniform                       & 10 bits        \\
+\textit{D55} & Sub-sampling & bilinear interpolation       & 5\% sampled  & Simplification & Garland\&Eckbert              & 92\% removed   \\
+\textit{D56} & Sub-sampling & bilinear interpolation       & 5\% sampled  & Simplification & Garland\&Eckbert              & 87\% removed   \\
+\textit{D61} & Sub-sampling & bilinear interpolation       & 8\% sampled  & Smoothing      & Taubin                        & 25  iterations \\
+\textit{D62} & Sub-sampling & bilinear interpolation       & 8\% sampled  & Smoothing      & Taubin                        & 50 iterations  \\
+\textit{D63} & Sub-sampling & bilinear interpolation       & 8\% sampled  & Quantization   & Uniform                       & 8 bits         \\
+\textit{D64} & Sub-sampling & bilinear interpolation       & 8\% sampled  & Quantization   & Uniform                       & 10 bits        \\
+\textit{D65} & Sub-sampling & bilinear interpolation       & 8\% sampled  & Simplification & Garland\&Eckbert              & 92\% removed   \\
+\textit{D66} & Sub-sampling & bilinear interpolation       & 8\% sampled  & Simplification & Garland\&Eckbert              & 87\% removed  
+\end{tabular}
+\end{table}
+
 \subsection{Rendering parameters}
 \noindent\textbf{User interaction}:
 In existing subjective studies involving 3D content, different ways have been used to display the 3D models to the observers, from the most simple (as static images, as in \cite{Watson2001}) to the most complex (by allowing free rotation, zoom and translation, as in \cite{Corsini2007}). While it is important for the observer to have access to different viewpoints of the 3D object, the problem of allowing free interaction is the cognitive overload which may alter the results. A good compromise is to use animations, as in \cite{Pan2005}. For each object of our database, we generate a low-speed rotation animation around the vertical axis (0.628rad/s).\\
