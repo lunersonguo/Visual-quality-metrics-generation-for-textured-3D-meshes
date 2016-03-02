@@ -11,7 +11,7 @@ Based on the observations and previous studies, we propose a novel local distort
 Since all the distorted models have mono-type of attacks(either geometric or textural attacks),the subjective vote scores can be also used as ground truths to evaluate the existing geometric and imaging measurements respectively, and consequently determine the most appropriate measurements for the optimal combinations. For all the distorted models, we firstly split them into two groups: one group only with geometric distortions and the other only with textural distortions. Then we select several commonly used perceptually geometric and image metrics to measure the correspondent models, which means the geometric metrics measure the models in geometric distortions group, while the image metrics measure the models in textural distortions group. For the measurements of geometric distortions, we choose MSE metric, MSDM2 \cite{Lavou__2011}, which is one of the best performed perceptually-motivated metrics, and our newly proposed metric: SDCD, whilst we select MSE, SSIM \cite{Wang_2004} and MS-SSIM \cite{Wang} metrics for the measurements of textural distortions.  Since each model has a vote score from subjects, in each group, we consider all the vote score as ground truth to evaluate the performances of metrics.  Table 3 shows the Spearman and Pearson correlations between the geometric metrics and the vote scores in geometric distortions group, and Table 4 presents the two correlations between the image metrics and the vote scores in textural distortions group.\\
 \begin{table}[]
 \centering
-\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) between geometric metrics and ground truths(vote scores) in geometric distortions group}
+\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between geometric metrics and ground truths(vote scores) in geometric distortions group}
 \label{my-label}
 \begin{tabular}{lllllllllll}
                           &  \textbf{Squirrel} & \textbf{} & \textbf{Hulk} & \textbf{} & \textbf{Easter Island Statue} & \textbf{} & \textbf{Sport Car} & \textbf{} & \textbf{All Models} &      \\
@@ -24,7 +24,7 @@ Since all the distorted models have mono-type of attacks(either geometric or tex
 
 \begin{table}[]
 \centering
-\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) between image metrics and ground truths(vote scores) in textural distortions group}
+\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between image metrics and ground truths(vote scores) in textural distortions group}
 \label{my-label}
 \begin{tabular}{lllllllllll}
                 & \textbf{Squirrel} & \textbf{} & \textbf{Hulk} & \textbf{} & \textbf{Easter Island Statue} & \textbf{} & \textbf{Sport Car} & \textbf{} & \textbf{All Models} &      \\
@@ -46,7 +46,7 @@ As we presented before, we used a cross-validation like protocol to optimize the
 
 \begin{table}[]
 \centering
-\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) between different quality metrics for textured 3D models and ground truths(vote scores)}
+\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between different quality metrics for textured 3D models and ground truths(vote scores)}
 \label{my-label}
 \begin{tabular}{lllllllllllll}
                      & \textbf{Squirrel} &               &      & \textbf{Hulk} &               &      & \textbf{Easter Head} &               &      & \textbf{Sport Car} &               &      \\
@@ -65,7 +65,7 @@ Since our optimal combinations are determined by the ground truths from the mode
 
 \begin{table}[]
 \centering
-\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) between different quality metrics for 36 Dwarf models and ground truths(vote scores)}
+\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between different quality metrics for 36 Dwarf models and ground truths(vote scores)}
 \label{my-label}
 \begin{tabular}{lllllll}
               & \textbf{VQM} & \textbf{VQM-PSNR} & \textbf{VQM-MSSSIM} & \textbf{FQM}  \cite{Tian_2004} & $CM_1$ & $CM_2$  \\
