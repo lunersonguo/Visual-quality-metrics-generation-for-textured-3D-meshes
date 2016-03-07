@@ -6,6 +6,7 @@ figures/allmodels1/allmodels1.png
 figures/Step1/Step1.png
 figures/step2/step2.png
 figures/step3/step3.png
+figures/StatDistortions20/StatDistortions20.png
 section_Toward_an_optimal_metric__.tex
 figures/Hulk_comparisons1/Hulk_comparisons1.png
 figures/metrics_4models/metrics_4models.png
