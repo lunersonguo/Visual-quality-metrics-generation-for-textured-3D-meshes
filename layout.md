@@ -13,4 +13,4 @@ figures/Hulk_comparisons1/Hulk_comparisons1.png
 figures/metrics_4models/metrics_4models.png
 figures/Car_comparisons/Car_comparisons.png
 figures/Dwarf_4models/Dwarf_4models.png
-section_Conclusion_and_perspectives_n__.tex
+section_Conclusion_and_perspectives_In__.tex
