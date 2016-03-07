@@ -9,6 +9,7 @@ figures/step3/step3.png
 figures/StatDistortions20/StatDistortions20.png
 figures/StatDistortions10/StatDistortions10.png
 section_Toward_an_optimal_metric__.tex
+section_Conclusion_and_perspectives__.tex
 figures/Hulk_comparisons1/Hulk_comparisons1.png
 figures/metrics_4models/metrics_4models.png
 figures/Car_comparisons/Car_comparisons.png
