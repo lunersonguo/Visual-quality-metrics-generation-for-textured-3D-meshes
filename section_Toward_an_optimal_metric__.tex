@@ -45,7 +45,7 @@ where $\alpha$ is a weight for combining two measures. Then we utilized machine 
 As we presented before, we used a cross-validation like protocol to optimize the combinations of geometric and textural measurements: $CM_1$(the optimal combination of MSDM2 and MS-SSIM) and $CM_2$(the optimal combination of SDCD and MS-SSIM). To evaluate the optimal combinations, we also introduced FQM and some well-known Video Quality Measurements: VQM, VQM-PSNR and VQM-MSSSIM, the last two of which are embedded with image quality metrics, for the comparison. Since previously FQM was not subjected to perceptual validations by any subjective experiment, in our study we used our protocol to determine the optimal weight for $Q_G$ and $Q_T$. Then, we computed the Spearman rank and Pearson correlations between the measured values and ground truths, and also calculated RMSE values of residuals. All results are shown in the Table 5. Meanwhile, Figure 9 shows the scatter plot of vote score versus metric predictions for each model, the best performed video quality metric(VQM-MSSSIM) according to Table 5, FQM, $CM_1$ and $CM_2$ are chosen for evaluating the effectiveness of all the metrics.\\
 \begin{table}[]
 \centering
-\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between different quality metrics for textured 3D models and ground truths(vote scores)}
+\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between different quality metrics for textured 3D models and ground truths(vote scores). Rendering proposed by}
 \label{my-label}
 \begin{tabular}{llllllllllllllll}
                     &      & \textbf{Squirrel} & \textbf{} & \textbf{} & \textbf{Hulk} & \textbf{} & \textbf{} & \textbf{Easter Island Statue} & \textbf{} & \textbf{} & \textbf{Sport Car} & \textbf{} & \textbf{} & \textbf{Dwarf} &      \\
@@ -66,7 +66,7 @@ From the Table 5 and Figure 10, we can see that our combinations outperform amon
 In order to analyze the influence of rendering on the optimal combinations, we used our cross-validation like protocol to optimize the combinations of FQM, $CM_1$ and $CM_2$ based the ground truths from videos rendering settings only with reflectance. Similarly, we also introduced VQM, VQM-PSNR and VQM-MSSSIM for the measures of the videos with this rendering. Then, we computed the Spearman rank and Pearson correlations between the measured values and ground truths, and also calculated RMSE values of residuals. All results are shown in the Table 7.\\
 \begin{table}[]
 \centering
-\caption{My caption}
+\caption{Pearson($r_p$) and Spearman rank( $r_s$) correlation values(\%) and RMSE values between different quality metrics for textured 3D models and ground truths(vote scores) Rendering only with reflectance.}
 \label{my-label}
 \begin{tabular}{llllllllllllllll}
                     & \textbf{}     & \textbf{Squirrel} & \textbf{}     & \textbf{}     & \textbf{Hulk} & \textbf{}     & \textbf{Easter Island Statue}     & \textbf{} & \textbf{}     & \textbf{}     & \textbf{Sport Car} & \textbf{}     & \textbf{}     & \textbf{Dwarf} &               \\
