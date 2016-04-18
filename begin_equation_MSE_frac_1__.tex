@@ -46,3 +46,6 @@ IW-SSIM(x, y) = \frac{\sum_i{\omega_{j,i}c(x_{j,i},y_{j,i})s(x_{j,i},y_{j,i})}}{
 \begin{equation}
 IW-SSIM_j(x, y) = \frac{1}{N_j}\sum_i{l(x_{j,i},y_{j,i})c(x_{j,i},y_{j,i})s(x_{j,i},y_{j,i})}
 \end{equation} 
+\begin{equation}
+MS-SSIM_j(x, y) = \prod_{j=1}^M{(SSIM_j)^{\beta_j}}
+\end{equation}
