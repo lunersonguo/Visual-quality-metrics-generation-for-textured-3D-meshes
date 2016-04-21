@@ -9,5 +9,6 @@ D^N= GC^N + V^N = \{ g_i C_i + V_i : i \in N \}
 
 \begin{equation}
 I(C^N; D^N|s^N)  = \sum_{i=1}^N{(h(D_i|s_i)-h(D_i|C_i,s_i))} \\
-= \sum_{i=1}^N{(h( g_i C_i + V_i|s_i)-h(V_i))}
+= \sum_{i=1}^N{(h( g_i C_i + V_i|s_i)-h(V_i))} \\
+= \frac{1}{2}\sum_{i=1}^N{\log_2{1+\frac{g_i^2s_i^2\sigma^2_U}{\sigma^2_V}}}
 \end{equation}
