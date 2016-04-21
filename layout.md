@@ -16,3 +16,4 @@ figures/Dwarf_4models/Dwarf_4models.png
 section_Conclusion_and_perspectives_In__.tex
 begin_equation_MSE_frac_1__.tex
 begin_equation_C_N_S_i__.tex
+begin_equation_VIF_frac_sum___.tex
