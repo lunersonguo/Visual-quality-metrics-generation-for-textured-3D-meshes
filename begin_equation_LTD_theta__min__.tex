@@ -7,4 +7,7 @@ LTPDM_i =RW^{(\gamma)}_iRW^{(K)}_iLTD_i
 \begin{equation}
 S(v)= |G(K_{mean}(v), \sigma) - G(K_{mean}(v), 2\sigma)|
 \end{equation}
-On a small region with radius $\sigma$ ($\sigma \in \{ 2\epsilon, 3\epsilon, 4\epsilon, 5\epsilon, 6\epsilon \}$, where $\epsilon$ is 0.3\% of the length of the diagonal of the bounding box of a mesh), for the center vertex $v$, it firstly computes the Gaussian average of the mean curvatures ($G(K_{mean}(v), \sigma)$) over the vertices within the region. Then the local mesh saliency $S(v)$ is calculated as:
+On a small region with radius $\sigma$ ($\sigma \in \{ 2\epsilon, 3\epsilon, 4\epsilon, 5\epsilon, 6\epsilon \}$, where $\epsilon$ is 0.3\% of the diagonal length of the mesh’s bounding box), for the center vertex $v$, it firstly computes the Gaussian average of the mean curvatures ($G(K_{mean}(v), \sigma)$) over the vertices within the region. Then the local mesh saliency $S(v)$ is calculated as:
+\begin{equation}
+S(v)= |G(K_{mean}(v), \sigma) - G(K_{mean}(v), 2\sigma)|
+\end{equation}.
