@@ -20,3 +20,4 @@ begin_equation_VIF_frac_sum___.tex
 begin_equation_e_p_A__.tex
 begin_equation_GL_v_v__.tex
 begin_equation_LMSDM_a_b__.tex
+begin_equation_LTD_theta__min__.tex
