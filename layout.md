@@ -21,3 +21,4 @@ begin_equation_e_p_A__.tex
 begin_equation_GL_v_v__.tex
 begin_equation_LMSDM_a_b__.tex
 begin_equation_LTD_theta__min__.tex
+begin_equation_rho_d_1_vec__.tex
